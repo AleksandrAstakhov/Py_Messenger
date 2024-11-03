@@ -66,3 +66,16 @@
 
 ```bash
 pip install -r requirements.txt
+
+```
+## Зпуск приложения:
+
+```
+python server.py
+```
+на сервере
+
+```
+python client.py
+```
+на клиенте
