@@ -4,10 +4,12 @@ WORKDIR /app
 
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
+RUN apt-get update
+RUN apt-get install -y sqlite3 
 
 COPY . .
 
-ARG SERVER_HOST=127.0.0.1
+ARG SERVER_HOST=0.0.0.0
 ARG SERVER_PORT=5000
 
 ENV SERVER_HOST=$SERVER_HOST

@@ -8,7 +8,7 @@ app = Flask(__name__)
 app.config["SECRET_KEY"] = "secret!"
 socketio = SocketIO(app)
 
-DATABASE = "database.db"
+DATABASE = "./data/database.db"
 
 
 def init_db():
@@ -139,6 +139,6 @@ def handle_request_history():
 
 
 if __name__ == "__main__":
-    host = os.environ.get("SERVER_HOST", "127.0.0.1")
+    host = os.environ.get("SERVER_HOST", "0.0.0.0")
     port = int(os.environ.get("SERVER_PORT", "5000"))
     socketio.run(app, host=host, port=port, debug=True)
