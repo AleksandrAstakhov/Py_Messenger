@@ -7,7 +7,7 @@ import os
 SERVER_HOST = os.environ.get("SERVER_HOST", "127.0.0.1")
 SERVER_PORT = os.environ.get("SERVER_PORT", "5000")
 
-SERVER_URL = "http://" + SERVER_URL + ":" + SERVER_PORT
+SERVER_URL = "http://" + SERVER_HOST + ":" + SERVER_PORT
 
 
 class MessengerAPIClient:
